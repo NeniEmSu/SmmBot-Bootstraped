@@ -1,0 +1,32 @@
+{
+  "name": "smmbotbootstraped",
+  "version": "1.0.0",
+  "description": "Smm Bot",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "keywords": [
+    "gulp",
+    "npm",
+    "scss"
+  ],
+  "author": "Neni Emmanuel",
+  "license": "MIT",
+  "homepage": "",
+  "devDependencies": {
+    "browser-sync": "^2.26.3",
+    "gulp": "^4.0.0",
+    "gulp-autoprefixer": "^6.0.0",
+    "gulp-imagemin": "^5.0.3",
+    "gulp-sass": "^4.0.2"
+  },
+  "dependencies": {
+    "inter-ui": "^3.3.4",
+    "typeface-inter": "^3.2.0"
+  }
+}
