@@ -12,6 +12,7 @@
 html {
     overflow-x: hidden;
     scroll-behavior: smooth;
+    margin: 0 auto;
 }
 
 body {
@@ -21,6 +22,9 @@ body {
     height: 100%;
     padding: 0;
     overflow-x: hidden;
+    justify-content: center;
+    text-align: center;
+    margin: 0 auto;
 }
 
 h1 {
@@ -82,7 +86,6 @@ a {
 p {
     font-size: 18px;
     font-family: $mainFont;
-    padding: 0.5rem 0;
 }
 
 button {
@@ -114,6 +117,11 @@ header {
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
     overflow: hidden;
+    min-height: 100px;
+
+    .logo {
+        margin-left: 2.5%;
+    }
 
     .headerCentered {
         font-family: Roboto;
@@ -125,38 +133,33 @@ header {
 
     .login {
         font-size: 18px;
-        float: right;
-        position: absolute;
-        top: 50%;
-        right: 0%;
-        transform: translate(-50%, -50%);
         margin-right: 2.5%;
     }
 }
 
 .headerImage {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), url("../img/header_background.png");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("../img/header_background.png");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
     background-attachment: fixed;
-    width: 100%;
-    height: 100%;
-    display: flex;
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    justify-content: center;
 
     h1 {
         background-image: linear-gradient(to bottom, #BC8CCD 0%, #72A5BA 100%);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
-        text-align: left;
-        float: right;
+        margin-top: 30%;
     }
 
+
     a#svgButton {
-        position: relative;
+        position: absolute;
         padding: 35px 68px;
         z-index: 0;
-        float: left;
         font-style: normal;
         font-weight: normal;
         line-height: normal;
@@ -165,9 +168,8 @@ header {
         letter-spacing: 0.1em;
         color: #AEE1F7;
         text-decoration: none;
-        margin-top: 50%;
-        margin-bottom: 50%;
-        margin-right: -9rem;
+        margin-top: 40%;
+
 
         .icon {
             position: absolute;
@@ -213,6 +215,10 @@ header {
     }
 }
 
+
+
+
+
 main {
     width: 90vw;
     margin: 0 auto;
@@ -221,64 +227,300 @@ main {
     justify-content: center;
     align-items: center;
 
-    a.cardSvgButton {
-        display: block;
-        color: #557C8C;
-        font-size: 15px;
-        position: relative;
-        margin: 10px auto;
-        padding: 14px 28px;
-        border-radius: 28px;
-        -webkit-border-radius: 28px;
-        -moz-border-radius: 28px;
-        -ms-border-radius: 28px;
-        -o-border-radius: 28px;
-        position: relative;
-        z-index: 0;
-        font-style: normal;
-        font-weight: normal;
-        line-height: normal;
-        text-align: center;
-        text-decoration: none;
+    section.one {
 
-        .icon {
-            position: absolute;
-            top: 0px;
-            left: 0px;
-            height: 100%;
-            width: 100%;
-            z-index: -1;
+        h2.text-center {
+            margin: 60px 0 0 0 0;
+        }
 
-            path {
-                transition: opacity 0.4s ease;
+        .card {
+            min-width: 300px;
+            max-width: 360px;
+            height: 400px;
+            box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.35);
+            border-radius: 50px;
+            color: #333333;
+            text-align: center;
+            margin: 60px auto 0 auto;
 
-                &:first-of-type {
-                    fill: transparent;
-                    stroke: url(#linearGradient-1);
-                    stroke-width: 3;
-                    opacity: 1;
-                    color: white;
+            &:nth-child(1) {
+                .cardParag {
+                    padding-bottom: 4rem;
+                }
+            }
+
+            &:nth-child(2) {
+                .cardParag {
+                    padding-bottom: 0.5rem;
+                }
+            }
+
+            &:nth-child(3) {
+                .cardParag {
+                    padding-bottom: 7rem;
+                }
+            }
+
+            h3 {
+                margin: 20px 0 0 0;
+                text-align: center;
+            }
+
+            hr {
+                width: 80%;
+                margin: 10px auto 0 auto;
+                text-align: left;
+                border: 2px solid #E5E5E5;
+            }
+
+            p {
+                text-align: left;
+                font-style: normal;
+                font-weight: normal;
+                line-height: normal;
+                font-size: 14px;
+                color: #6D6D6D;
+            }
+
+            a.cardSvgButton {
+                display: block;
+                color: #557C8C;
+                font-size: 15px;
+                position: relative;
+                margin: 10px auto;
+                padding: 14px 28px;
+                border-radius: 28px;
+                -webkit-border-radius: 28px;
+                -moz-border-radius: 28px;
+                -ms-border-radius: 28px;
+                -o-border-radius: 28px;
+                position: relative;
+                z-index: 0;
+                font-style: normal;
+                font-weight: normal;
+                line-height: normal;
+                text-align: center;
+                text-decoration: none;
+
+                .icon {
+                    position: absolute;
+                    top: 0px;
+                    left: 0px;
+                    height: 100%;
+                    width: 100%;
+                    z-index: -1;
+
+                    path {
+                        transition: opacity 0.4s ease;
+
+                        &:first-of-type {
+                            fill: transparent;
+                            stroke: url(#linearGradient-1);
+                            stroke-width: 3;
+                            opacity: 1;
+                            color: white;
+                        }
+
+                        &.icon--plain {
+                            opacity: 0;
+                            stroke: none;
+                            stroke-width: 0;
+                        }
+                    }
                 }
 
-                &.icon--plain {
-                    opacity: 0;
-                    stroke: none;
-                    stroke-width: 0;
+                &:hover {
+                    color: #ffffff;
+                    @include easeOut;
+
+                    path {
+                        &:first-of-type {
+                            opacity: 0;
+                        }
+
+                        &.icon--plain {
+                            opacity: 1;
+                        }
+                    }
                 }
             }
         }
+    }
 
-        &:hover {
-            color: white;
-            @include easeOut;
 
-            path {
-                &:first-of-type {
-                    opacity: 0;
+
+    hr {
+        margin: 60px 0 0 0;
+        border: 2px solid #E5E5E5;
+    }
+
+    section.two {
+
+        h2 {
+            margin: 65px 0;
+            font-style: normal;
+            font-weight: normal;
+            line-height: normal;
+            font-size: 36px;
+            text-align: center;
+            color: #333333;
+        }
+
+        .socials {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+            grid-gap: 20px;
+            text-align: center;
+            margin: 65px auto 0 auto;
+            justify-content: center;
+
+            a {
+                text-decoration: none;
+            }
+
+            .socialMedia {
+                margin: 1.5rem;
+            }
+
+            .roundedBorders {
+                font-size: 14px;
+                margin: 14px 0 0 0;
+                padding: 7px 9px;
+                border: 1px solid #C4C4C4;
+                box-sizing: border-box;
+                border-radius: 30px;
+            }
+        }
+
+    }
+
+    section.three {
+
+        h2 {
+            margin: 53px 0 0 0;
+            font-style: normal;
+            font-weight: normal;
+            line-height: normal;
+            font-size: 36px;
+            text-align: center;
+            color: #333333;
+        }
+
+        h3 {
+            font-style: normal;
+            font-weight: normal;
+            line-height: normal;
+            font-size: 16px;
+            color: #333333;
+        }
+
+        .card {
+            max-width: 300px;
+            min-width: 299px;
+            height: 400px;
+            box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.35);
+            border-radius: 50px;
+            color: #333333;
+            text-align: center;
+            margin: 53px auto 0 auto;
+
+            &:nth-child(1) {
+                img {
+                    margin-top: 25px;
+                }
+            }
+
+            img {
+                margin-top: 47px;
+            }
+
+            p.price {
+                font-style: normal;
+                font-weight: normal;
+                line-height: normal;
+                font-size: 30px;
+                color: #333333;
+                padding: 0;
+            }
+
+            p.priceExplanation {
+                font-style: normal;
+                font-weight: normal;
+                line-height: normal;
+                font-size: 12px;
+                color: #6D6D6D;
+                margin: 0 auto;
+                padding: 0;
+            }
+
+            p {
+                font-style: normal;
+                font-weight: normal;
+                line-height: normal;
+                font-size: 12px;
+                text-align: center;
+                color: #6D6D6D;
+            }
+
+            a.cardSvgButton {
+                display: block;
+                color: #557C8C;
+                font-size: 15px;
+                position: relative;
+                margin: 10px auto;
+                padding: 14px 37px;
+                border-radius: 37px;
+                -webkit-border-radius: 37px;
+                -moz-border-radius: 37px;
+                -ms-border-radius: 37px;
+                -o-border-radius: 37px;
+                position: relative;
+                z-index: 0;
+                font-style: normal;
+                font-weight: normal;
+                line-height: normal;
+                text-align: center;
+                text-decoration: none;
+
+                .icon {
+                    position: absolute;
+                    top: 0px;
+                    left: 0px;
+                    height: 100%;
+                    width: 100%;
+                    z-index: -1;
+
+                    path {
+                        transition: opacity 0.4s ease;
+
+                        &:first-of-type {
+                            fill: transparent;
+                            stroke: url(#linearGradient-1);
+                            stroke-width: 3;
+                            opacity: 1;
+                        }
+
+                        &.icon--plain {
+                            opacity: 0;
+                            stroke: none;
+                            stroke-width: 0;
+                        }
+                    }
                 }
 
-                &.icon--plain {
-                    opacity: 1;
+                &:hover {
+                    color: #ffffff;
+                    @include easeOut;
+
+                    path {
+                        &:first-of-type {
+                            opacity: 0;
+                        }
+
+                        &.icon--plain {
+                            opacity: 1;
+                        }
+                    }
                 }
             }
         }
@@ -286,119 +528,79 @@ main {
 }
 
 
-hr {
+footer {
+    background: -webkit-linear-gradient(bottom, rgb(114, 165, 186) 0%, rgb(159, 150, 198) 60%, rgb(188, 140, 205) 100%);
+    background: -o-linear-gradient(bottom, rgb(114, 165, 186) 0%, rgb(159, 150, 198) 60%, rgb(188, 140, 205) 100%);
+    background: -ms-linear-gradient(bottom, rgb(114, 165, 186) 0%, rgb(159, 150, 198) 60%, rgb(188, 140, 205) 100%);
+    background: -moz-linear-gradient(bottom, rgb(114, 165, 186) 0%, rgb(159, 150, 198) 60%, rgb(188, 140, 205) 100%);
+    background: linear-gradient(to top, rgb(114, 165, 186) 0%, rgb(159, 150, 198) 60%, rgb(188, 140, 205) 100%);
+    width: 100vw;
     margin: 60px auto 0 auto;
-    border: 2px solid #E5E5E5;
-}
-
-h2 {
-    margin: 65px auto 0 auto;
-    font-style: normal;
-    font-weight: normal;
-    line-height: normal;
-    font-size: 36px;
-    text-align: center;
-    color: #333333;
-}
-
-
-
-h3 {
-    font-style: normal;
-    font-weight: normal;
-    line-height: normal;
-    font-size: 16px;
-    color: #333333;
-}
-
-p.price {
-    font-style: normal;
-    font-weight: normal;
-    line-height: normal;
-    font-size: 30px;
-    color: #333333;
-    padding: 0;
-}
-
-p.priceExplanation {
-    font-style: normal;
-    font-weight: normal;
-    line-height: normal;
-    font-size: 12px;
-    color: #6D6D6D;
-    margin: 0 auto;
-    padding: 0;
-}
-
-p {
-    font-style: normal;
-    font-weight: normal;
-    line-height: normal;
-    font-size: 12px;
-    text-align: center;
-    color: #6D6D6D;
-}
-
-a.cardSvgButton {
-    display: block;
-    color: #557C8C;
-    font-size: 15px;
+    height: auto;
+    overflow: hidden;
     position: relative;
-    margin: 10px auto;
-    padding: 14px 37px;
-    border-radius: 37px;
-    -webkit-border-radius: 37px;
-    -moz-border-radius: 37px;
-    -ms-border-radius: 37px;
-    -o-border-radius: 37px;
-    position: relative;
-    z-index: 0;
-    font-style: normal;
-    font-weight: normal;
-    line-height: normal;
-    text-align: center;
-    text-decoration: none;
+    bottom: 0px;
 
-    .icon {
-        position: absolute;
-        top: 0px;
-        left: 0px;
-        height: 100%;
+    .footerContainer {
         width: 100%;
-        z-index: -1;
+        margin: 51px auto;
+        text-align: center;
+        justify-content: center;
+        color: #FFFFFF;
 
-        path {
-            transition: opacity 0.4s ease;
+        .footerTop {
+            display: flex;
 
-            &:first-of-type {
-                fill: transparent;
-                stroke: url(#linearGradient-1);
-                stroke-width: 3;
-                opacity: 1;
+            a {
+                color: #FFFFFF;
             }
 
-            &.icon--plain {
-                opacity: 0;
-                stroke: none;
-                stroke-width: 0;
-            }
-        }
-    }
-
-    &:hover {
-        @include easeOut;
-
-        path {
-            &:first-of-type {
-                opacity: 0;
+            img {
+                margin-right: 41px;
+                margin-bottom: 1rem;
             }
 
-            &.icon--plain {
-                opacity: 1;
+            .text {
+
+                h4 {
+                    margin-bottom: 1rem;
+                }
             }
         }
+
+        .supportOptions {
+            width: 85%;
+            margin: 21px 0;
+            justify-items: center;
+            justify-content: center;
+            color: #FFFFFF;
+            margin-left: calc(100vw - 97vw);
+
+            .supportOptionsItem {
+                width: 12rem;
+                text-align: center;
+                padding: 20px;
+                justify-content: center;
+
+                h5 {
+                    margin: 10px 0 13px 0;
+                }
+
+                p {
+                    text-align: center;
+                }
+            }
+
+            hr {
+                height: 75%;
+                border: 1px solid #FFFFFF;
+            }
+
+        }
+
+
     }
 }
-}
-}
-}
+
+
+@import "mobile";
