@@ -185,7 +185,7 @@ main {
     border-radius: 50px;
     color: #333333;
     text-align: center;
-    margin: 60px auto 0 auto; }
+    margin: 60px 0.5rem 0 0.5rem; }
     main section.one .card:nth-child(1) .cardParag {
       padding-bottom: 4rem; }
     main section.one .card:nth-child(2) .cardParag {
@@ -303,7 +303,7 @@ main {
     border-radius: 50px;
     color: #333333;
     text-align: center;
-    margin: 53px auto 0 auto; }
+    margin: 53px 0.5rem 0 0.5rem; }
     main section.three .card:nth-child(1) img {
       margin-top: 25px; }
     main section.three .card img {
@@ -398,8 +398,7 @@ footer {
       footer .footerContainer .footerTop a {
         color: #FFFFFF; }
       footer .footerContainer .footerTop img {
-        margin-right: 41px;
-        margin-bottom: 1rem; }
+        margin-right: 41px; }
       footer .footerContainer .footerTop .text h4 {
         margin-bottom: 1rem; }
     footer .footerContainer .supportOptions {
