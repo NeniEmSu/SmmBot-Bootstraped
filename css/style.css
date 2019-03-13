@@ -9,7 +9,9 @@
 html {
   overflow-x: hidden;
   scroll-behavior: smooth;
-  margin: 0 auto; }
+  margin: 0 auto;
+  height: 100%;
+  width: 100%; }
 
 body {
   background-color: #F5F5F5;
@@ -99,8 +101,7 @@ header {
   border-radius: 0px 0px 10px 10px;
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
-  overflow: hidden;
-  min-height: 100px; }
+  overflow: hidden; }
   header .logo {
     margin-left: 2.5%; }
   header .headerCentered {
@@ -122,14 +123,16 @@ header {
   width: 100vw;
   height: 100vh;
   margin: 0;
-  justify-content: center; }
+  justify-content: center;
+  align-content: center; }
   .headerImage h1 {
+    margin: 60px auto;
+    margin-left: 40%;
     background-image: linear-gradient(to bottom, #BC8CCD 0%, #72A5BA 100%);
     -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    margin-top: 30%; }
+    -webkit-text-fill-color: transparent; }
   .headerImage a#svgButton {
-    position: absolute;
+    position: relative;
     padding: 35px 68px;
     z-index: 0;
     font-style: normal;
@@ -139,8 +142,7 @@ header {
     text-align: center;
     letter-spacing: 0.1em;
     color: #AEE1F7;
-    text-decoration: none;
-    margin-top: 40%; }
+    text-decoration: none; }
     .headerImage a#svgButton .icon {
       position: absolute;
       top: 0px;
@@ -169,36 +171,31 @@ header {
         opacity: 1; }
 
 main {
-  width: 90vw;
+  max-width: 90vw;
   margin: 0 auto;
   text-align: center;
-  margin: 1.5rem auto;
+  margin: auto;
   justify-content: center;
   align-items: center; }
   main section.one h2.text-center {
-    margin: 60px 0 0 0 0; }
+    margin: 60px 0 0 0; }
   main section.one .card {
-    min-width: 300px;
+    min-width: 360px;
     max-width: 360px;
     height: 400px;
     box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.35);
     border-radius: 50px;
     color: #333333;
     text-align: center;
-    margin: 60px auto 0 auto; }
-    main section.one .card:nth-child(1) .cardParag {
-      padding-bottom: 4rem; }
-    main section.one .card:nth-child(2) .cardParag {
-      padding-bottom: 0.5rem; }
-    main section.one .card:nth-child(3) .cardParag {
-      padding-bottom: 7rem; }
+    margin: 60px auto 0 auto;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box; }
     main section.one .card h3 {
-      margin: 20px 0 0 0;
+      margin: 0;
       text-align: center; }
     main section.one .card hr {
       width: 80%;
-      margin: 10px auto 0 auto;
-      text-align: left;
+      margin: 18px auto;
       border: 2px solid #E5E5E5; }
     main section.one .card p {
       text-align: left;
@@ -211,8 +208,7 @@ main {
       display: block;
       color: #557C8C;
       font-size: 15px;
-      position: relative;
-      margin: 10px auto;
+      margin: 0 auto;
       padding: 14px 28px;
       border-radius: 28px;
       -webkit-border-radius: 28px;
@@ -252,6 +248,14 @@ main {
           opacity: 0; }
         main section.one .card a.cardSvgButton:hover path.icon--plain {
           opacity: 1; }
+  main section.one .card-one .cardParag {
+    padding-bottom: 50px; }
+  main section.one .card-two .cardParag {
+    padding-bottom: 0px; }
+  main section.one .card-two a.cardSvgButton {
+    margin-top: 0px; }
+  main section.one .card-three .cardParag {
+    padding-bottom: 100px; }
   main hr {
     margin: 60px 0 0 0;
     border: 2px solid #E5E5E5; }
@@ -296,7 +300,7 @@ main {
     font-size: 16px;
     color: #333333; }
   main section.three .card {
-    max-width: 300px;
+    max-width: 299px;
     min-width: 299px;
     height: 400px;
     box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.35);
@@ -304,10 +308,10 @@ main {
     color: #333333;
     text-align: center;
     margin: 53px auto 0 auto; }
-    main section.three .card:nth-child(1) img {
-      margin-top: 25px; }
     main section.three .card img {
-      margin-top: 47px; }
+      margin-top: 43px; }
+      main section.three .card img.big-image {
+        margin-top: 23px; }
     main section.three .card p.price {
       font-style: normal;
       font-weight: normal;

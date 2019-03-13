@@ -1,6 +1,5 @@
 @import "config";
 @import url('https://fonts.googleapis.com/css?family=Roboto');
-
 * {
     margin: 0;
     padding: 0;
@@ -13,6 +12,8 @@ html {
     overflow-x: hidden;
     scroll-behavior: smooth;
     margin: 0 auto;
+    height: 100%;
+    width: 100%;
 }
 
 body {
@@ -117,12 +118,9 @@ header {
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
     overflow: hidden;
-    min-height: 100px;
-
     .logo {
         margin-left: 2.5%;
     }
-
     .headerCentered {
         font-family: Roboto;
         font-style: normal;
@@ -130,7 +128,6 @@ header {
         line-height: normal;
         font-size: 16px;
     }
-
     .login {
         font-size: 18px;
         margin-right: 2.5%;
@@ -147,17 +144,16 @@ header {
     height: 100vh;
     margin: 0;
     justify-content: center;
-
+    align-content: center;
     h1 {
+        margin: 60px auto;
+        margin-left: 40%;
         background-image: linear-gradient(to bottom, #BC8CCD 0%, #72A5BA 100%);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
-        margin-top: 30%;
     }
-
-
     a#svgButton {
-        position: absolute;
+        position: relative;
         padding: 35px 68px;
         z-index: 0;
         font-style: normal;
@@ -168,9 +164,6 @@ header {
         letter-spacing: 0.1em;
         color: #AEE1F7;
         text-decoration: none;
-        margin-top: 40%;
-
-
         .icon {
             position: absolute;
             top: 0px;
@@ -178,17 +171,14 @@ header {
             height: 100%;
             width: 100%;
             z-index: -1;
-
             path {
                 transition: opacity 0.4s ease;
-
                 &:first-of-type {
                     fill: transparent;
                     stroke: url(#linearGradient-1);
                     stroke-width: 4;
                     opacity: 1;
                 }
-
                 &.icon--plain {
                     opacity: 0;
                     stroke: none;
@@ -196,17 +186,14 @@ header {
                 }
             }
         }
-
         &:hover {
             color: white;
             @include easeOut;
-
             path {
                 &:first-of-type {
                     color: white;
                     opacity: 0;
                 }
-
                 &.icon--plain {
                     opacity: 1;
                 }
@@ -215,26 +202,19 @@ header {
     }
 }
 
-
-
-
-
 main {
-    width: 90vw;
+    max-width: 90vw;
     margin: 0 auto;
     text-align: center;
-    margin: 1.5rem auto;
+    margin: auto;
     justify-content: center;
     align-items: center;
-
     section.one {
-
         h2.text-center {
-            margin: 60px 0 0 0 0;
+            margin: 60px 0 0 0;
         }
-
         .card {
-            min-width: 300px;
+            min-width: 360px;
             max-width: 360px;
             height: 400px;
             box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.35);
@@ -242,37 +222,17 @@ main {
             color: #333333;
             text-align: center;
             margin: 60px auto 0 auto;
-
-            &:nth-child(1) {
-                .cardParag {
-                    padding-bottom: 4rem;
-                }
-            }
-
-            &:nth-child(2) {
-                .cardParag {
-                    padding-bottom: 0.5rem;
-                }
-            }
-
-            &:nth-child(3) {
-                .cardParag {
-                    padding-bottom: 7rem;
-                }
-            }
-
+            box-sizing: border-box;
+            -webkit-box-sizing: border-box;
             h3 {
-                margin: 20px 0 0 0;
+                margin: 0;
                 text-align: center;
             }
-
             hr {
                 width: 80%;
-                margin: 10px auto 0 auto;
-                text-align: left;
+                margin: 18px auto;
                 border: 2px solid #E5E5E5;
             }
-
             p {
                 text-align: left;
                 font-style: normal;
@@ -281,13 +241,11 @@ main {
                 font-size: 14px;
                 color: #6D6D6D;
             }
-
             a.cardSvgButton {
                 display: block;
                 color: #557C8C;
                 font-size: 15px;
-                position: relative;
-                margin: 10px auto;
+                margin: 0 auto;
                 padding: 14px 28px;
                 border-radius: 28px;
                 -webkit-border-radius: 28px;
@@ -301,7 +259,6 @@ main {
                 line-height: normal;
                 text-align: center;
                 text-decoration: none;
-
                 .icon {
                     position: absolute;
                     top: 0px;
@@ -309,10 +266,8 @@ main {
                     height: 100%;
                     width: 100%;
                     z-index: -1;
-
                     path {
                         transition: opacity 0.4s ease;
-
                         &:first-of-type {
                             fill: transparent;
                             stroke: url(#linearGradient-1);
@@ -320,7 +275,6 @@ main {
                             opacity: 1;
                             color: white;
                         }
-
                         &.icon--plain {
                             opacity: 0;
                             stroke: none;
@@ -328,16 +282,13 @@ main {
                         }
                     }
                 }
-
                 &:hover {
                     color: #ffffff;
                     @include easeOut;
-
                     path {
                         &:first-of-type {
                             opacity: 0;
                         }
-
                         &.icon--plain {
                             opacity: 1;
                         }
@@ -345,17 +296,30 @@ main {
                 }
             }
         }
+        .card-one {
+            .cardParag {
+                padding-bottom: 50px;
+            }
+        }
+        .card-two {
+            .cardParag {
+                padding-bottom: 0px;
+            }
+            a.cardSvgButton {
+                margin-top: 0px;
+            }
+        }
+        .card-three {
+            .cardParag {
+                padding-bottom: 100px;
+            }
+        }
     }
-
-
-
     hr {
         margin: 60px 0 0 0;
         border: 2px solid #E5E5E5;
     }
-
     section.two {
-
         h2 {
             margin: 65px 0;
             font-style: normal;
@@ -365,7 +329,6 @@ main {
             text-align: center;
             color: #333333;
         }
-
         .socials {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
@@ -373,15 +336,12 @@ main {
             text-align: center;
             margin: 65px auto 0 auto;
             justify-content: center;
-
             a {
                 text-decoration: none;
             }
-
             .socialMedia {
                 margin: 1.5rem;
             }
-
             .roundedBorders {
                 font-size: 14px;
                 margin: 14px 0 0 0;
@@ -391,11 +351,8 @@ main {
                 border-radius: 30px;
             }
         }
-
     }
-
     section.three {
-
         h2 {
             margin: 53px 0 0 0;
             font-style: normal;
@@ -405,7 +362,6 @@ main {
             text-align: center;
             color: #333333;
         }
-
         h3 {
             font-style: normal;
             font-weight: normal;
@@ -413,9 +369,8 @@ main {
             font-size: 16px;
             color: #333333;
         }
-
         .card {
-            max-width: 300px;
+            max-width: 299px;
             min-width: 299px;
             height: 400px;
             box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.35);
@@ -423,17 +378,12 @@ main {
             color: #333333;
             text-align: center;
             margin: 53px auto 0 auto;
-
-            &:nth-child(1) {
-                img {
-                    margin-top: 25px;
+            img {
+                margin-top: 43px;
+                &.big-image {
+                    margin-top: 23px;
                 }
             }
-
-            img {
-                margin-top: 47px;
-            }
-
             p.price {
                 font-style: normal;
                 font-weight: normal;
@@ -442,7 +392,6 @@ main {
                 color: #333333;
                 padding: 0;
             }
-
             p.priceExplanation {
                 font-style: normal;
                 font-weight: normal;
@@ -452,7 +401,6 @@ main {
                 margin: 0 auto;
                 padding: 0;
             }
-
             p {
                 font-style: normal;
                 font-weight: normal;
@@ -461,7 +409,6 @@ main {
                 text-align: center;
                 color: #6D6D6D;
             }
-
             a.cardSvgButton {
                 display: block;
                 color: #557C8C;
@@ -481,7 +428,6 @@ main {
                 line-height: normal;
                 text-align: center;
                 text-decoration: none;
-
                 .icon {
                     position: absolute;
                     top: 0px;
@@ -489,17 +435,14 @@ main {
                     height: 100%;
                     width: 100%;
                     z-index: -1;
-
                     path {
                         transition: opacity 0.4s ease;
-
                         &:first-of-type {
                             fill: transparent;
                             stroke: url(#linearGradient-1);
                             stroke-width: 3;
                             opacity: 1;
                         }
-
                         &.icon--plain {
                             opacity: 0;
                             stroke: none;
@@ -507,16 +450,13 @@ main {
                         }
                     }
                 }
-
                 &:hover {
                     color: #ffffff;
                     @include easeOut;
-
                     path {
                         &:first-of-type {
                             opacity: 0;
                         }
-
                         &.icon--plain {
                             opacity: 1;
                         }
@@ -526,7 +466,6 @@ main {
         }
     }
 }
-
 
 footer {
     background: -webkit-linear-gradient(bottom, rgb(114, 165, 186) 0%, rgb(159, 150, 198) 60%, rgb(188, 140, 205) 100%);
@@ -540,34 +479,27 @@ footer {
     overflow: hidden;
     position: relative;
     bottom: 0px;
-
     .footerContainer {
         width: 100%;
         margin: 51px auto;
         text-align: center;
         justify-content: center;
         color: #FFFFFF;
-
         .footerTop {
             display: flex;
-
             a {
                 color: #FFFFFF;
             }
-
             img {
                 margin-right: 41px;
                 margin-bottom: 1rem;
             }
-
             .text {
-
                 h4 {
                     margin-bottom: 1rem;
                 }
             }
         }
-
         .supportOptions {
             width: 85%;
             margin: 21px 0;
@@ -575,32 +507,24 @@ footer {
             justify-content: center;
             color: #FFFFFF;
             margin-left: calc(100vw - 97vw);
-
             .supportOptionsItem {
                 width: 12rem;
                 text-align: center;
                 padding: 20px;
                 justify-content: center;
-
                 h5 {
                     margin: 10px 0 13px 0;
                 }
-
                 p {
                     text-align: center;
                 }
             }
-
             hr {
                 height: 75%;
                 border: 1px solid #FFFFFF;
             }
-
         }
-
-
     }
 }
-
 
 @import "mobile";
