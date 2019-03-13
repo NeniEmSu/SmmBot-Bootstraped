@@ -1,5 +1,6 @@
 @import "config";
 @import url('https://fonts.googleapis.com/css?family=Roboto');
+
 * {
     margin: 0;
     padding: 0;
@@ -118,9 +119,11 @@ header {
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
     overflow: hidden;
+
     .logo {
         margin-left: 2.5%;
     }
+
     .headerCentered {
         font-family: Roboto;
         font-style: normal;
@@ -128,6 +131,7 @@ header {
         line-height: normal;
         font-size: 16px;
     }
+
     .login {
         font-size: 18px;
         margin-right: 2.5%;
@@ -145,6 +149,7 @@ header {
     margin: 0;
     justify-content: center;
     align-content: center;
+
     h1 {
         margin: 60px auto;
         margin-left: 40%;
@@ -152,6 +157,7 @@ header {
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
     }
+
     a#svgButton {
         position: relative;
         padding: 35px 68px;
@@ -164,6 +170,7 @@ header {
         letter-spacing: 0.1em;
         color: #AEE1F7;
         text-decoration: none;
+
         .icon {
             position: absolute;
             top: 0px;
@@ -171,14 +178,17 @@ header {
             height: 100%;
             width: 100%;
             z-index: -1;
+
             path {
                 transition: opacity 0.4s ease;
+
                 &:first-of-type {
                     fill: transparent;
                     stroke: url(#linearGradient-1);
                     stroke-width: 4;
                     opacity: 1;
                 }
+
                 &.icon--plain {
                     opacity: 0;
                     stroke: none;
@@ -186,14 +196,17 @@ header {
                 }
             }
         }
+
         &:hover {
             color: white;
             @include easeOut;
+
             path {
                 &:first-of-type {
                     color: white;
                     opacity: 0;
                 }
+
                 &.icon--plain {
                     opacity: 1;
                 }
@@ -209,10 +222,12 @@ main {
     margin: auto;
     justify-content: center;
     align-items: center;
+
     section.one {
         h2.text-center {
             margin: 60px 0 0 0;
         }
+
         .card {
             min-width: 360px;
             max-width: 360px;
@@ -221,12 +236,10 @@ main {
             border-radius: 50px;
             color: #333333;
             text-align: center;
-<<<<<<< HEAD
-            margin: 60px auto 0 auto;
+            <<<<<<< HEAD margin: 60px auto 0 auto;
             box-sizing: border-box;
             -webkit-box-sizing: border-box;
-=======
-            margin: 60px 0.5rem 0 0.5rem;
+            =======margin: 60px 0.5rem 0 0.5rem;
 
             &:nth-child(1) {
                 .cardParag {
@@ -246,16 +259,17 @@ main {
                 }
             }
 
->>>>>>> 339d5fe4e23a1848a1b9e8214048fb2f9d7cfaee
-            h3 {
+            >>>>>>>339d5fe4e23a1848a1b9e8214048fb2f9d7cfaee h3 {
                 margin: 0;
                 text-align: center;
             }
+
             hr {
                 width: 80%;
                 margin: 18px auto;
                 border: 2px solid #E5E5E5;
             }
+
             p {
                 text-align: left;
                 font-style: normal;
@@ -264,6 +278,7 @@ main {
                 font-size: 14px;
                 color: #6D6D6D;
             }
+
             a.cardSvgButton {
                 display: block;
                 color: #557C8C;
@@ -282,6 +297,7 @@ main {
                 line-height: normal;
                 text-align: center;
                 text-decoration: none;
+
                 .icon {
                     position: absolute;
                     top: 0px;
@@ -289,8 +305,10 @@ main {
                     height: 100%;
                     width: 100%;
                     z-index: -1;
+
                     path {
                         transition: opacity 0.4s ease;
+
                         &:first-of-type {
                             fill: transparent;
                             stroke: url(#linearGradient-1);
@@ -298,6 +316,7 @@ main {
                             opacity: 1;
                             color: white;
                         }
+
                         &.icon--plain {
                             opacity: 0;
                             stroke: none;
@@ -305,13 +324,16 @@ main {
                         }
                     }
                 }
+
                 &:hover {
                     color: #ffffff;
                     @include easeOut;
+
                     path {
                         &:first-of-type {
                             opacity: 0;
                         }
+
                         &.icon--plain {
                             opacity: 1;
                         }
@@ -319,29 +341,35 @@ main {
                 }
             }
         }
+
         .card-one {
             .cardParag {
                 padding-bottom: 50px;
             }
         }
+
         .card-two {
             .cardParag {
                 padding-bottom: 0px;
             }
+
             a.cardSvgButton {
                 margin-top: 0px;
             }
         }
+
         .card-three {
             .cardParag {
                 padding-bottom: 100px;
             }
         }
     }
+
     hr {
         margin: 60px 0 0 0;
         border: 2px solid #E5E5E5;
     }
+
     section.two {
         h2 {
             margin: 65px 0;
@@ -352,6 +380,7 @@ main {
             text-align: center;
             color: #333333;
         }
+
         .socials {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
@@ -359,12 +388,15 @@ main {
             text-align: center;
             margin: 65px auto 0 auto;
             justify-content: center;
+
             a {
                 text-decoration: none;
             }
+
             .socialMedia {
                 margin: 1.5rem;
             }
+
             .roundedBorders {
                 font-size: 14px;
                 margin: 14px 0 0 0;
@@ -375,6 +407,7 @@ main {
             }
         }
     }
+
     section.three {
         h2 {
             margin: 53px 0 0 0;
@@ -385,6 +418,7 @@ main {
             text-align: center;
             color: #333333;
         }
+
         h3 {
             font-style: normal;
             font-weight: normal;
@@ -392,6 +426,7 @@ main {
             font-size: 16px;
             color: #333333;
         }
+
         .card {
             max-width: 299px;
             min-width: 299px;
@@ -400,10 +435,8 @@ main {
             border-radius: 50px;
             color: #333333;
             text-align: center;
-<<<<<<< HEAD
-            margin: 53px auto 0 auto;
-=======
-            margin: 53px 0.5rem 0 0.5rem;
+            <<<<<<< HEAD margin: 53px auto 0 auto;
+            =======margin: 53px 0.5rem 0 0.5rem;
 
             &:nth-child(1) {
                 img {
@@ -411,13 +444,14 @@ main {
                 }
             }
 
->>>>>>> 339d5fe4e23a1848a1b9e8214048fb2f9d7cfaee
-            img {
+            >>>>>>>339d5fe4e23a1848a1b9e8214048fb2f9d7cfaee img {
                 margin-top: 43px;
+
                 &.big-image {
                     margin-top: 23px;
                 }
             }
+
             p.price {
                 font-style: normal;
                 font-weight: normal;
@@ -426,6 +460,7 @@ main {
                 color: #333333;
                 padding: 0;
             }
+
             p.priceExplanation {
                 font-style: normal;
                 font-weight: normal;
@@ -435,6 +470,7 @@ main {
                 margin: 0 auto;
                 padding: 0;
             }
+
             p {
                 font-style: normal;
                 font-weight: normal;
@@ -443,6 +479,7 @@ main {
                 text-align: center;
                 color: #6D6D6D;
             }
+
             a.cardSvgButton {
                 display: block;
                 color: #557C8C;
@@ -462,6 +499,7 @@ main {
                 line-height: normal;
                 text-align: center;
                 text-decoration: none;
+
                 .icon {
                     position: absolute;
                     top: 0px;
@@ -469,14 +507,17 @@ main {
                     height: 100%;
                     width: 100%;
                     z-index: -1;
+
                     path {
                         transition: opacity 0.4s ease;
+
                         &:first-of-type {
                             fill: transparent;
                             stroke: url(#linearGradient-1);
                             stroke-width: 3;
                             opacity: 1;
                         }
+
                         &.icon--plain {
                             opacity: 0;
                             stroke: none;
@@ -484,13 +525,16 @@ main {
                         }
                     }
                 }
+
                 &:hover {
                     color: #ffffff;
                     @include easeOut;
+
                     path {
                         &:first-of-type {
                             opacity: 0;
                         }
+
                         &.icon--plain {
                             opacity: 1;
                         }
@@ -513,26 +557,32 @@ footer {
     overflow: hidden;
     position: relative;
     bottom: 0px;
+
     .footerContainer {
         width: 100%;
         margin: 51px auto;
         text-align: center;
         justify-content: center;
         color: #FFFFFF;
+
         .footerTop {
             display: flex;
+
             a {
                 color: #FFFFFF;
             }
+
             img {
                 margin-right: 41px;
             }
+
             .text {
                 h4 {
                     margin-bottom: 1rem;
                 }
             }
         }
+
         .supportOptions {
             width: 85%;
             margin: 21px 0;
@@ -540,18 +590,22 @@ footer {
             justify-content: center;
             color: #FFFFFF;
             margin-left: calc(100vw - 97vw);
+
             .supportOptionsItem {
                 width: 12rem;
                 text-align: center;
                 padding: 20px;
                 justify-content: center;
+
                 h5 {
                     margin: 10px 0 13px 0;
                 }
+
                 p {
                     text-align: center;
                 }
             }
+
             hr {
                 height: 75%;
                 border: 1px solid #FFFFFF;
